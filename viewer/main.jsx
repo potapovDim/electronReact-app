@@ -1,6 +1,7 @@
 'use babel';
 import React, {Component} from 'react';
 import {BaseRadio} from './app/baseComponent/radio'
+import {downloadFile} from '../utils/download'
 
 const radios = [
   {title: 'First'},
@@ -23,14 +24,18 @@ export default class Main extends Component {
         <BaseRadio 
           onChange={this.chooseState}
           title={rad.title}
-          checked={this.state.checkedState===rad.title}/>
+          checked={this.state.checkedState === rad.title}/>
           {rad.title}
         </div>)
     return <div>
       <button onClick= {() => {this.setState({counter: this.state.counter+ 1})}}>Increment</button>
+      <button onClick= {() => {
+        downloadFile(this.state.checkedState.toString(), 'mytext.txt', 'text/plain', 'download')
+      }}>Create File</button>
       <h1>{this.state.counter}</h1>
       First app
       <div>{radioButtons}</div>
+      <a href="" id="download">Download file</a>
     </div>;
   }
 }
