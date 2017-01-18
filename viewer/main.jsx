@@ -1,6 +1,6 @@
 'use babel';
 import React, {Component} from 'react';
-import {BaseRadio} from './app/baseComponent/radio'
+import {BaseRadio} from './app/baseComponent/radio.jsx'
 import {downloadFile} from '../utils/download'
 
 const radios = [
