@@ -1,5 +1,5 @@
-'use babel';
-import React, {Component} from 'react';
+'use babel'
+import React, {Component} from 'react'
 import {BaseRadio} from './app/baseComponent/radio.jsx'
 import {downloadFile} from '../utils/download'
 
@@ -36,6 +36,6 @@ export default class Main extends Component {
       First app
       <div>{radioButtons}</div>
       <a href="" id="download">Download file</a>
-    </div>;
+    </div>
   }
 }

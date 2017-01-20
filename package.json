@@ -2,12 +2,13 @@
   "name": "react-electron-app",
   "version": "1.0.0",
   "description": "training",
-  "main": "main.js",
+  "main": "main.prod.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production electron .",
+    "start": "NODE_ENV=dev electron ./main.dev.js ",
     "pack": "build --dir",
-    "build": "electron-packager . MyEditor --out=./build --platform=darwin --arch=x64 --version=0.35.1 --asar --overwrite --ignore=\"build\""
+    "prebuild": "NODE_ENV=production webpack ./webpack.config.js",
+    "build": "electron-packager . MyApp --out=./build --platform=darwin --arch=x64 --version=0.35.1 --asar --overwrite --ignore=\"build\""
   },
   "build": {
     "appId": "test",
