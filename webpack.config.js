@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
-  entry: './run_scripts/build.js',
+  entry: './run_scripts/main.js',
   output: {
-    path: path.resolve(__dirname, 'bundle'),
+    path: path.resolve(__dirname, ''),
     filename: "dist.js"
   },
   devServer: {
