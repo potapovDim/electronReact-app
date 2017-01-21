@@ -8,7 +8,7 @@
     "start": "NODE_ENV=dev electron ./main.dev.js ",
     "pack": "build --dir",
     "prebuild": "NODE_ENV=production webpack ./webpack.config.js",
-    "build": "electron-packager . MyApp --out=./build --platform=darwin --arch=x64 --version=0.35.1 --asar --overwrite --ignore=\"build\""
+    "build": "electron-packager . MyApp --out=./build --platform=darwin --arch=x64 --version=0.35.1 --asar --overwrite --ignore=\"node_modules|build\""
   },
   "build": {
     "appId": "test",
