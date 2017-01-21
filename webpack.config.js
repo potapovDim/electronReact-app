@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  entry: './run_scripts/main.js',
+  entry: ['babel-core/register', './viewer/main.jsx'],
   output: {
     path: path.resolve(__dirname, ''),
     filename: "dist.js"
@@ -9,7 +9,6 @@ module.exports = {
     port: 3333,
     historyApiFallback: true
   },
-
   module: {
     loaders: [
       {
@@ -21,15 +20,9 @@ module.exports = {
           plugins: ['babel-plugin-transform-decorators-legacy']
         }
       }
-      ,{
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-0'],
-          plugins: ['babel-plugin-transform-decorators-legacy']
-        }
-      }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   }
 }
