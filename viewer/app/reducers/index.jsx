@@ -6,4 +6,4 @@ const rootReducer = combineReducers({
   textReducer
 })
 
-export default store = createStore(rootReducer)
+export const store =  createStore(rootReducer)
