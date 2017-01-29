@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './app/index.jsx';
-import {Provider} from 'react-redux'
-import {store} from './app/reducers/index'
+import routers from './routers'
 
-window.onload = function (){
+window.onload = function () {
   ReactDOM.render(
-      <Provider store ={store}>
-        <Main />
-        </Provider> ,
-     document.getElementById('app'));
+      routers,
+      document.getElementById('app'));
 }

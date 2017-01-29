@@ -13,7 +13,7 @@ const radios = [
   {title: 'Fourth'}
 ]
 
-class Main extends Component {
+export class Main extends Component {
   state = {
     counter: 0,
     checkedState: ''
@@ -48,5 +48,3 @@ class Main extends Component {
     </div>
   }
 }
-
-export default connect(state => state)(Main)

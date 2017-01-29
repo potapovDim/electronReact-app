@@ -28,7 +28,7 @@
     "electron"
   ],
   "author": "Potapov Dmitriy",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/potapovDim/electronReact-app/issues"
   },
