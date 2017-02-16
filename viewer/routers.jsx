@@ -6,7 +6,7 @@ import MainContainer from './app/containers/main'
 export default (
   <Router history={browserHistory}>
     <Route component={RootContainer}>
-      <Route path="/main/" component={MainContainer} />
+      <Route path="/" component={MainContainer} />
     </Route>
   </Router>
 )

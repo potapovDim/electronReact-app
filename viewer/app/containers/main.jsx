@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 class MainContainer extends Component {
   render() {
     return <div >
-      <Main />
+      <Main {...this.props}/>
     </div>
   }
 }

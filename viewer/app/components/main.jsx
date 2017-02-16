@@ -26,7 +26,9 @@ export class Main extends Component {
       text: event.target.value
     })
   }
+
   render() {
+    console.log(this.props)
     const radioButtons = radios.map((rad,index) => 
     <div key={index}>
         <BaseRadio 
@@ -44,7 +46,7 @@ export class Main extends Component {
       First app
       <div>{radioButtons}</div>
       <BaseInput onChange ={this.changeStateInput}/>
-      <a href="" id="download">Download file</a>
+      <a id="download">Download file</a>
     </div>
   }
 }
