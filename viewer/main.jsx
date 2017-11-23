@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import routers from './routers'
+import App from './app'
+
+
 
 window.onload = function () {
   ReactDOM.render(
-      routers,
-      document.getElementById('app'));
+    <App />,
+    document.getElementById('app'));
 }

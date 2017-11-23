@@ -13,6 +13,7 @@ const BrowserWindow =  process.env.NODE_ENV === 'production'
 let mainWindow = null
 
 const initApp = () => {
+
   app.on('window-all-closed', () => {
     if (process.platform != 'darwin') {
       app.quit()
@@ -20,7 +21,7 @@ const initApp = () => {
   })
   app.on('ready', () => {
     mainWindow = new BrowserWindow({width: 800, height: 600})
-    mainWindow.loadURL('file://' + __dirname + template)
+    mainWindow.loadURL('file:///' + __dirname + template)
     mainWindow.on('closed', () => {
       mainWindow = null
     })
